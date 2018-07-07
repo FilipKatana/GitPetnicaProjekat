@@ -11,6 +11,8 @@ class glavnaBaza:
         self.fajlovi = fajlovi
         self.fajlovi [_fajl.path] = _fajl.ime
         
+    #Molim te dodaj funkciju za učitavanje iz baze.
+        
     def pisiUCSV(self):
         f = open("glavnabaza.csv" , "a")
         for key in self.fajlovi.keys():
