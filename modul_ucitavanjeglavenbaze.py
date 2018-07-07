@@ -1,23 +1,33 @@
 import csv
-from fakemodul_fajl import fajl
+from fakemodul_fajl import *
 import itertools
+import sys
+
 
 class glavnaBaza:
     
-    def __init__ (self, file , fajlovi = {"podatak" : "fajl1"}):
-        self.file = file
+    def __init__ (self, _fajl , fajlovi = { "" : "" } ):
+        self._fajl = _fajl
         self.fajlovi = fajlovi
-
+        self.fajlovi [_fajl.path] = _fajl.ime
+        
     def pisiUCSV(self):
-        f = open("glavnabaza.csv" , "w")
-        
+        f = open("glavnabaza.csv" , "a")
         for key in self.fajlovi.keys():
-            f.write(str(key) + "," + str(self.fajlovi[key]) )
+            f.write(str(key) + "," + str(self.fajlovi[key]) + "\n")
         
+    """
+    def dodajFolderuIliFajlUBazu(fajl):
+        path = fajl.path
+        if self.fajlovi[path] not {}:
+            self.fajlovi[path] = fajl
+        else:
+            self.fajlovi
+    """   
         
 
-
-fl = fajl()
+flt = open('fajl2' , "r")
+fl = fajl(flt )
 gl = glavnaBaza(fl).pisiUCSV()
 
 

@@ -1,0 +1,17 @@
+from fakemodul_fajl import *
+import os
+
+f = open("fajl")
+
+nizAddovanihFajlova = [fajl(f)]
+
+def commit(name , message , version):
+    for i in nizAddovanihFajlova :
+        if i.ime == name:
+            i.message = message
+            i.trenutnaverzija += 1
+            i.trenutnaverzijausr = version
+        else :
+            print("file dose not exist or its not added")
+
+commit("fajl" , "mesage" , "jebiga" )
