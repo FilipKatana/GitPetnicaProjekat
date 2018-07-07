@@ -1,5 +1,7 @@
 keyword = ["commit" , "add" , "init"]
 
+#Molim te napravi da interpreter vraca funkciju.
+
 from modul_intrepreter import *
 from modul_commit import *
 from modul_init import *
